@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Sign in</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<link href="//fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</head>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>  
+<body>
+	 <section class="workinghny-form">
+        <div class="workinghny-form-grid">
+            <div class="wrapper">
+                <div class="logo">
+                    <h1><a class="brand-logo" href="index.html">Sign In</a></h1>
+                </div>
+                <div class="workinghny-block-grid">
+                    <div class="workinghny-left-img align-end">
+                        <img src="images/2.png" class="img-responsive" alt="img" />
+                    </div>
+                    <div class="form-right-inf">
+						
+                        <div class="login-form-content">
+                            <h2>Where to?</h2>
+                            <form action="#" class="signin-form" name="myform" method="post" onsubmit="return validateform()">
+								<div class="one-frm">
+									<label>Name</label>
+									<input type="text" name="name"  placeholder="" required="">
+								</div>
+								<div class="one-frm">
+									<label>Password</label>
+									<input type="password" name="password"  placeholder="" required="">
+								</div>
+                                <label class="check-remaind">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p class="remember">Remember Me</p>
+
+                                </label>
+                                <button class="btn btn-style mt-3">Sign In </button>
+                                <p class="already">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
